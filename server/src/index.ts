@@ -1,7 +1,10 @@
 // src/index.ts
 
+import dotenv from "dotenv";
+dotenv.config();
+
 const app = require("./app");
-require("dotenv").config();
+
 const config = require("./utils/config");
 
 console.log(`configPORTTI is:: ${config.PORT}`);
