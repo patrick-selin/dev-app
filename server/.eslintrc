@@ -2,13 +2,15 @@
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:jest/recommended"
   ],
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "jest"],
   "env": {
     "browser": true,
     "es6": true,
-    "node": true
+    "node": true,
+    "jest": true
   },
   "rules": {
     "@typescript-eslint/semi": ["error"],
@@ -25,6 +27,8 @@
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
     "project": "./server/tsconfig.json"
   }
 }
