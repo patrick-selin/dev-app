@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  dev-app-server:
+    image: dev-app-server
+    environment:
+      - PORT=3005
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    ports:
+      - 3005:3005
+    volumes:
+      - ./:/usr/src/app
